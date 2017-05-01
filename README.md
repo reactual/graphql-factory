@@ -1,90 +1,21 @@
-# graphql-factory
+# graphql-factory-docs
 
-Compose GraphQL objects with JSON definitions
+> GraphQL Factory Documentation
 
----
+## Build Setup
 
-`graphql-factory` is a JavaScript library that helps you build GraphQL Types and Schemas using JSON. The library follows the GraphQL spec as closely as possible and adds additional control fields to make type definition easier and more modular.
+``` bash
+# install dependencies
+npm install
 
-[![npm version](https://badge.fury.io/js/graphql-factory.svg)](https://badge.fury.io/js/graphql-factory) [![Build Status](https://travis-ci.org/graphql-factory/graphql-factory.svg?branch=master)](https://travis-ci.org/graphql-factory/graphql-factory) [![Dependency Status](https://david-dm.org/graphql-factory/graphql-factory.svg)](https://david-dm.org/graphql-factory/graphql-factory) [![devDependency Status](https://david-dm.org/graphql-factory/graphql-factory/dev-status.svg)](https://david-dm.org/graphql-factory/graphql-factory#info=devDependencies) [![Known Vulnerabilities](https://snyk.io/test/github/graphql-factory/graphql-factory/badge.svg)](https://snyk.io/test/github/graphql-factory/graphql-factory)
+# serve with hot reload at localhost:8080
+npm run dev
 
-[![Join the chat at https://gitter.im/graphql-factory/Lobby](https://badges.gitter.im/graphql-factory.svg)](https://gitter.im/graphql-factory/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# build for production with minification
+npm run build
 
-## Usage
-
-```js
-import * as graphql from 'graphql'
-import GraphQLFactory from 'graphql-factory'
-
-let factory = GraphQLFactory(graphql)
-
+# build for production and view the bundle analyzer report
+npm run build --report
 ```
 
-## Documentation
-
-* [WIKI](https://github.com/graphql-factory/graphql-factory/wiki)
-* [Examples](https://github.com/graphql-factory/graphql-factory/wiki/Examples)
-* [API Reference](https://github.com/graphql-factory/graphql-factory/wiki/API-Reference)
-
-## Example
-
-```js
-import * as graphql from 'graphql'
-import GraphQLFactory from 'graphql-factory'
-
-let factory = GraphQLFactory(graphql)
-
-let definition = {
-  types: {
-    EnumUserStatus: {
-      type: 'Enum',
-      values: {
-        OFFLINE: 'OFFLINE',
-        ONLINE: 'ONLINE'
-      }
-    },
-    User: {
-      fields: {
-        id: { type: 'String', primary: true },
-        name: { type: 'String', nullable: false },
-        email: { type: 'String' },
-        status: { type: 'EnumUserStatus' }
-      }
-    }
-  },
-  schemas: {
-    Users: {
-      query: {
-        fields: {
-          users: {
-            type: ['User'],
-            resolve (root, args) {
-              // query code
-            }
-          }
-        }
-      },
-      mutation: {
-        fields: {
-          create: {
-            type: 'User',
-            args: {
-              name: { type: 'String', nullable: false  },
-              email: { type: 'String'},
-              status: { type: 'EnumUserStatus' }
-            },
-            resolve (obj, args, source, fieldASTs) {
-              // create code
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-let lib = factory.make(definition)
-lib.Users('{ users { id, name, email } }').then(function (result) {
-  // do something with the result
-})
-```
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

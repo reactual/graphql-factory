@@ -1,8 +1,7 @@
 .DS_Store
 node_modules/
-npm-debug.log
-selenium-debug.log
-test/unit/coverage
-test/e2e/reports
-.idea/
-example/build.js
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.idea
