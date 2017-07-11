@@ -1,6 +1,6 @@
-# graphql-factory-docs
+# graphql-factory
 
-> GraphQL Factory Documentation
+> graphql-factory documentation
 
 ## Build Setup
 
