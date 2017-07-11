@@ -1,0 +1,86 @@
+.page-container {
+  margin-top: 50px;
+}
+
+.txt-bold {
+  font-weight: bold;
+}
+
+.alert-soft {
+  background-color: rgba(108, 185, 216, 0.31);
+  color: #666;
+}
+
+.body-slide-left {
+  right: 80%;
+}
+
+p.usage {
+  margin-bottom: 0px;
+}
+
+@media (min-width: 768px) {
+  .desktop-hide {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (max-width: 768px) {
+  .mobile-hide {
+    display: none;
+  }
+  .mobile-show {
+    display: block;
+  }
+}
+
+.mobile-menu-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 50%;
+  background-color: #234884;
+  color: #fff;
+}
+
+.mobile-menu-button:active, .mobile-menu-button:focus {
+  outline: none !important;
+  background-color: #234884 !important;
+  color: #fff !important;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0
+}
+
+/* enable absolute positioning */
+.inner-addon {
+  position: relative;
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1.5em;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 10px; top: 25%;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
