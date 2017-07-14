@@ -1,15 +1,18 @@
 <template lang="pug">
   #app
     navbar
+    mobile-nav
     router-view
 </template>
 
 <script type="text/babel">
   import Navbar from '@/components/Navbar'
+  import MobileNav from '@/components/MobileNav'
   export default {
     name: 'app',
     components: {
-      Navbar
+      Navbar,
+      MobileNav
     },
     computed: {
       store () {

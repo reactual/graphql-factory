@@ -112,6 +112,10 @@
     padding: 5px 10px 5px 10px;
   }
 
+  .mobile-hamburger span.icon-bar {
+    background-color: #00A9DD !important;
+  }
+
   @media (max-width: 768px) {
     .navbar-brand span {
       font-size: 0.8em;

@@ -1,16 +1,23 @@
 <template lang="pug">
   #main.container-fullwidth
-    #jumbo.jumbotron
+    #jumbo.jumbotron.container-fluid
       h2 A graphql toolkit
       h3 Tools for building graphql APIs
       a.btn.btn-lg.btn-primary(id="gitbutton", href="https://github.com/graphql-factory")
         i.fa.fa-lg.fa-code
         span &nbsp;Code on GitHub
+      .row
+        .col-sm-6.col-sm-offset-3
+          prism(language="bash", :plugins="['command-line']")
+            | npm install graphql-factory --save
 </template>
 
 <script type="text/babel">
+  import Prism from 'vue-prismjs'
   export default {
-
+    components: {
+      Prism
+    }
   }
 </script>
 

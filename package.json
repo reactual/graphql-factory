@@ -53,6 +53,7 @@
     "shelljs": "^0.7.6",
     "url-loader": "^0.5.8",
     "vue-loader": "^12.1.0",
+    "vue-prismjs": "git+https://github.com/vue-formation/vue-prismjs.git#master",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.3.3",
     "webpack": "^2.6.1",
